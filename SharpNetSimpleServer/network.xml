@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<config>
+    <ResendAfterNoAck>1450</ResendAfterNoAck>
+    <ResendRetries>100</ResendRetries>
+    <HeartbeatInterval>2000</HeartbeatInterval>
+    <ClientDisconnectedInterval>20500</ClientDisconnectedInterval>
+    <MessagePayloadSplitLimit>1000</MessagePayloadSplitLimit>
+    <UdpBufferSize>1200</UdpBufferSize>
+    <NetworkTick>20</NetworkTick>
+
+</config>

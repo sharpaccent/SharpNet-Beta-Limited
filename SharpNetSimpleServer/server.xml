@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<config>
+    <ApplicationId>123</ApplicationId> <!-- The Application Id used in your game, game servers, etc. -->
+    <ServerName>My Server</ServerName> <!-- A name for your server. Used in the control application. -->
+
+    <!-- Master Server Settings -->
+    <MasterServer enabled="true">
+        <MasterServerPort>27001</MasterServerPort> <!-- The port that your game connects to the Master Server -->
+        <GameServerConnectionPort>27002</GameServerConnectionPort> <!-- The port that the game servers connect to the Master Server -->
+        <AllowRoomsList>true</AllowRoomsList> <!-- Allow the clients to request a list of all the open and visible rooms -->
+        <AllowRoomInfo>true</AllowRoomInfo> <!-- Allow the clients to request a room's information (if open and visible?) along with a list of the players that are in that room -->
+    </MasterServer>
+
+    <!-- Game Server Settings -->
+    <GameServer enabled="true">
+        <MasterServerAddress>127.0.0.1</MasterServerAddress> <!-- The IP address of the Master Server -->
+        <MasterServerConnectionPort>27002</MasterServerConnectionPort> <!-- The port of the Master Server To Connect to -->
+
+        <GameServerAddress>127.0.0.1</GameServerAddress> <!-- The IP address of this Game Server -->
+        <GameServerPort>27003</GameServerPort> <!-- The port that the clients will connect to in this Game Server -->
+
+        <MaxPlayersPerRoom>10</MaxPlayersPerRoom>
+        <MaxRoomsPerGameServer>100</MaxRoomsPerGameServer>
+        <MaxPlayersPerGameServer>0</MaxPlayersPerGameServer>
+
+    </GameServer>
+
+    <!-- Monitoring API Settings -->
+    <MonitoringApi enabled="true" exposeToInternet="false">
+    	<MonitoringApiPort>8081</MonitoringApiPort>
+    	<MonitoringApiKey>asd</MonitoringApiKey>
+    	<MonitoringApiEncryptionKey>123</MonitoringApiEncryptionKey>
+    </MonitoringApi>
+
+</config>
